@@ -57,8 +57,8 @@ const ContactList = () => {
   return (
     <>
       <ContactsList>
-        {filteredContacts.map(({ id, name, number }) => (
-          <ContactItem key={id}>
+        {filteredContacts.map(({ _id, name, number }) => (
+          <ContactItem key={_id}>
             <Span>
               <FaUser color="#c8e9e3" /> {name}:
             </Span>
@@ -66,11 +66,11 @@ const ContactList = () => {
               <FaPhone color="#c8e9e3" /> {number}
             </Span>
             <WrapBtn>
-              <Btn type="button" onClick={() => showModal(name, number, id)}>
+              <Btn type="button" onClick={() => showModal(name, number, _id)}>
                 <AiFillEdit />
                 Edit
               </Btn>
-              <Btn type="button" onClick={() => handleDeleteContact(id)}>
+              <Btn type="button" onClick={() => handleDeleteContact(_id)}>
                 <AiFillDelete />
                 Delete
               </Btn>
