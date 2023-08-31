@@ -2,7 +2,8 @@ import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { Notify } from 'notiflix';
 
-axios.defaults.baseURL = 'http://localhost:8000';
+// axios.defaults.baseURL = 'http://localhost:8000';
+axios.defaults.baseURL = 'https://phonebook-backend-lb0c.onrender.com';
 
 // Utility to add JWT
 // Записує токен до заголовку Authorization дефолтного хедера в запиті axios
